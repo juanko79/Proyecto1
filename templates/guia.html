@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guía para hacer un Render de HTML en Django</h1>
+    <p>1 - Crear CARPETA con el nombre "templates" dentro de la carpeta del proyecto (Dentro de esta carpeta van los archivos con extensión .html)</p>
+    <p>2 - Vamos al archivo SETTINGS.PY y indicamos donde se ubiva nuestro directorio del proyecto y de la carpeta "templates" que creamos. Lo hacemos dentro de la LISTA de nombre TEMPLATES y queda así:</p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'DIRS': [BASE_DIR,'templates'],
+    <p>3 - Vamos al archivos VIEWS.PY e importamos el modulo RENDER de esta forma (al inicio y sin comillas): "from django.shortcuts import render". Así Django podrá renderizar los archivos HTML</p>
+    <p>2 - Dentro de la carpeta "templates" crear un archivo con el nombre que elijamos con extensión .HTML (Ejemplo: hola.html)</p>
+    <p>3 - Vamos al archivo VIEWS.PY y creamos la funcion para usar en el archivo HTML. Algo asi: DEF nombredelafunción(request) y debajo correctamente identado: return render(request, 'hola.html')</p>
+    <p>4 - vamos al archivos URLS.PY y agregamos el path o ruta de nuestra función creada recien. Ejemplo: path('hola/', views.nombredelafunción)</p>
+    <p>5 - Vamos a la terminal y levantamos el servidor de pruebas de Django con este comando sin comillas: "python manage.py runserver"</p>
+    <p>6 - vamos a nuestro explorador web (Chrome o Firefox o Edge) y escribimos http://127.0.0.1:8000/ y damos enter</p>
+    <p>7 - Si todo funciona bien debería aparece un listado de urls, empezando por ADMIN y luego ver HOLA.</p>
+    <p>8 - Tipeamos en la barra de direcciones http://127.0.0.1:8000/hola y listo, debería mostrar el mensaje que pusimos en la función que hicimos en el archivo VIEWS.PY</p>
+
+</body>
+</html>

@@ -20,7 +20,10 @@ from Proyecto1 import views #Segundo importamos el Views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludo/', views.saludo),  #Aqui ponemos la ruta de view y la funcion que creamos en el view
-    path('segunda_vista', views.segunda_vista),
-    path('dia_actual', views.dia_actual),
-    path('saludo_personalizado/<nombre>',views.saludo_personalizado)
+    path('segunda_vista/', views.segunda_vista),
+    path('dia_actual/', views.dia_actual),
+    path('saludo_personalizado/<nombre>',views.saludo_personalizado),
+    path('mostrarPrimerHTML/', views.mostrar_html),
+    path('OtroHTML/', views.segundo_html),
+    path('guia/', views.guia_render_html)
 ]
